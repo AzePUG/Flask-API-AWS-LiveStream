@@ -29,3 +29,11 @@ def test_if_can_allocate_jpeg():
 def test_if_can_allocate_pdf():
     pdf = model.PDF(dest_path="fake.pdf")
     assert model.allocate_pdf(dest_path="fake.pdf") == pdf
+    
+def test_if_cannot_allocate_pdf():
+    pdf = model.PDF(dest_path="fake.pdf")
+    assert model.allocate_pdf(dest_path="fake.png")
+    
+def test_if_cannot_allocate_jpeg():
+    jpg = model.JPG(src_path="fake.jpg")
+    assert model.allocate_jpeg(src_path="fake.png")

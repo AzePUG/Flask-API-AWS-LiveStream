@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-import sre_compile
+from src.domain.validators import is_jpeg, is_pdf
 
 @dataclass
 class JPG:
@@ -12,7 +12,9 @@ class PDF:
     extension: str = field(init=False, default=(".pdf"))
     
 def allocate_jpeg(src_path: str) -> JPG:
-    return JPG(src_path=src_path)
+    if is_jpeg(src_path):
+        return JPG(src_path=src_path)
 
 def allocate_pdf(dest_path: str) -> PDF:
-    return PDF(dest_path=dest_path)
+    if is_pdf(dest_path):
+        return PDF(dest_path=dest_path)
