@@ -10,11 +10,11 @@ class JPG:
 class PDF:
     dest_path: str
     extension: str = field(init=False, default=(".pdf"))
-    
-def allocate_jpeg(src_path: str) -> JPG:
-    if is_jpeg(src_path):
-        return JPG(src_path=src_path)
 
+@is_jpeg
+def allocate_jpeg(src_path: str) -> JPG:
+    return JPG(src_path=src_path)
+
+@is_pdf
 def allocate_pdf(dest_path: str) -> PDF:
-    if is_pdf(dest_path):
-        return PDF(dest_path=dest_path)
+    return PDF(dest_path=dest_path)
