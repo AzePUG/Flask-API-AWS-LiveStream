@@ -13,8 +13,10 @@
 
 ---
 
-**Eposide 1:**  [Design the API, setup code repository start and development](https://fb.me/e/1vhVe2gxg)
-
-**Eposide 2:** TBD
-
-**Eposide 3:** TBD
+|   Eposide  |                                           Details                                        |          Youtube Link         | Notes |
+| ---------- | ---------------------------------------------------------------------------------------- | ----------------------------- | ----- |
+| Eposide 1  | [Design the API, setup code repository start and development](https://fb.me/e/1vhVe2gxg) | https://youtu.be/I9CBxIrgTE4  |       |
+| Eposide 2  | [Continue Test-Driven Flask API development](https://fb.me/e/1zCup8vbs)                  |                N/A            |       |
+| Eposide 3  | N/A                                                                                      |                N/A            |       |
+| Eposide 4  | N/A                                                                                      |                N/A            |       |
+| Eposide 5  | N/A                                                                                      |                N/A            |       |
