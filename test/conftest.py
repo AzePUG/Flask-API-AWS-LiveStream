@@ -10,3 +10,17 @@ def app():
 @pytest.fixture
 def get_uuid():
     return uuid.uuid4()
+
+@pytest.fixture
+def get_init_jpg_dict(get_uuid):
+   return {
+        "code": get_uuid,
+        "src_path": "fake.jpg"
+    }
+   
+@pytest.fixture
+def get_init_pdf_dict(get_uuid):
+    return {
+        "code": get_uuid,
+        "dest_path": "fake.pdf"
+    }
