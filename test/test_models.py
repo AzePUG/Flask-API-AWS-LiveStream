@@ -64,3 +64,10 @@ def test_pdf_model_to_dict(get_uuid, get_init_pdf_dict):
     pdf = model.PDF.from_dict(get_init_pdf_dict)
     get_init_pdf_dict["extension"] = pdf.extension
     assert pdf.to_dict() == get_init_pdf_dict
+    
+def test_if_converted_model_is_created(get_uuid):
+    jpg = model.JPG(code=get_uuid, src_path="fake.jpg")
+    pdf = model.PDF(code=get_uuid, dest_path="fake.pdf")
+    converted = model.Converted(converted_from=jpg, converted_to=pdf)
+    assert converted.converted_to.code == get_uuid
+    assert converted.converted_from.code == get_uuid
